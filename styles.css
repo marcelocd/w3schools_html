@@ -1,0 +1,17 @@
+body {
+	background-color: black;
+}
+
+h1 {
+	color: yellow;
+	font-size: 300%;
+}
+
+p {
+	color: red;
+	text-align: center;
+	font-size: 160%;
+	border: 2px solid orange;
+	padding: 30px;
+	margin: 50px;
+}
