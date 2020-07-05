@@ -3,12 +3,57 @@
 	<head>
 		<title>HTML</title>
 		<style>
+			ul#menu {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+				background-color: #333333;
+			}
+
+			li#menu {
+				float: left;
+			}
+
+			li#menu, a#menu {
+				display: block;
+				color: white;
+				text-align: center;
+				padding: 16px;
+				text-decoration: none;
+			}
+
+			a#menu:hover {
+				background-color: #111111;
+			}
+
+			table {
+				background-color: rgba(46,45,46,0.5);
+				font-family: arial, sans-serif;
+				width: 50%;
+				border: 1px solid #dddddd;
+				border-spacing: 5px;
+				/*border-collapse: collapse;*/
+			}
+
+			td, th {
+				color: white;
+				border: 1px solid #dddddd;
+				text-align: left;
+				padding: 8px;
+			}
+
+			tr:nth-child(even) {
+				background-color: rgba(95,93,95,0.5)
+			}
+
 			body {
 				background-image: url('background.jpg');
 				/*background-repeat: no-repeat;*/
 				background-attachment: fixed;
 				/*background-size: cover;*/
 			}
+
 			h1, h2, h3, h4, h5, h6, p {
 				color: white;
 			}
@@ -17,8 +62,125 @@
 
 	<body style="background-color:powderblue;">
 		<p>This is the last link I finished studying: 
-			<a href="https://www.w3schools.com/html/html_images_background.asp" target="_blank">Link</a>
+			<a href="https://www.w3schools.com/html/html_lists_unordered.asp" target="_blank">Link</a>
 		</p>
+
+		<h2>Navigation Menu</h2>
+		<p>In this example, we use CSS to style the list horizontally, to create a navigation menu:</p>
+
+		<ul id="menu">
+			<li id="menu"><a id="menu" href="#home">Home</a></li>
+			<li id="menu"><a id="menu" href="#news">News</a></li>
+			<li id="menu"><a id="menu" href="#contacts">Contacts</a></li>
+			<li id="menu"><a id="menu" href="#about">About</a></li>
+		</ul>
+
+		<h2>A Description List</h2>
+
+		<dl style="color:white">
+			<dt>Coffee</dt>
+			<dd>- black hot drink</dd>
+			<dt>Milk</dt>
+			<dd>- white cold drink</dd>
+		</dl>
+
+		<!-- list-style-type options: disc, circle, square or none -->
+		<h2>An Unordered HTML List</h2>
+		<ul style="list-style-type:circle;color:white">
+			<li>Coffee</li>
+			<li>Tea
+				<ul style="list-style-type:square">
+					<li>Black tea</li>
+					<li>Green tea</li>
+				</ul>
+			</li>
+			<li>Milk</li>
+		</ul>
+
+		<h2>An Ordered HTML List</h2>
+		<ol style="color:white">
+			<li>Coffee</li>
+			<li>Tea</li>
+			<li>Milk</li>
+		</ol>
+
+		<table>
+			<tr>
+				<th>Name:</th>
+				<td>Bill Gates</td>
+			</tr>
+			<tr>
+				<th rowspan="2">Telephone:</th>
+				<td>55577854</td>
+			</tr>
+			<tr>
+				<td>55577855</td>
+			</tr>
+		</table>
+		<br>
+		<table>
+			<caption style="color:white;">Contact Book</caption>
+			<tr>
+				<th>Name</th>
+				<th>Birthdate</th>
+				<th>City</th>
+				<th colspan="2">Telephone</th>
+			</tr>
+			<tr>
+				<th>Marcelo</th>
+				<th>09/10/1993</th>
+				<th>Goiania</th>
+				<th>+55(62)98443-6440</th>
+				<th>none</th>
+			</tr>
+			<tr>
+				<th>Danielly</th>
+				<th>01/06/1997</th>
+				<th>Coroata</th>
+				<th>+55(62)99159-0646</th>
+				<th>none</th>
+			</tr>
+			<tr>
+				<th>Benjamin</th>
+				<th>01/??/2021</th>
+				<th>Goiania</th>
+				<th>none</th>
+				<th>none</th>
+			</tr>
+			<tr>
+				<th>Rosana</th>
+				<th>09/12/1972</th>
+				<th>Hidrolandia</th>
+				<th>+1(678)499-4635</th>
+				<th>none</th>
+			</tr>
+			<tr>
+				<th>Flavio</th>
+				<th>04/19/1961</th>
+				<th>Rio de Janeiro</th>
+				<th>+1(678)499-6208</th>
+				<th>11111111</th>
+			</tr>
+			<tr>
+				<th>Rosinha</th>
+				<th>15/06/1955</th>
+				<th>Seres</th>
+				<th>+1(678)499-4341</th>
+				<th>none</th>
+			</tr>
+		</table>
+		<br>
+		<picture>
+			<source srcset="bird_meme.jpeg">
+			<source srcset="coroata.png">
+			<img src="no_image.gif" alt="This image does not exist.">
+		</picture>
+		<br>
+		<picture>
+			<source media="(min-width: 650px)"srcset="img_food.jpg">
+			<source media="(min-width: 500px)"srcset="img_car.jpg">
+			<img src="img_girl.jpg" style="width:auto;">
+		</picture>
 
 		<h2>Image maps</h2>
 		<p>Click on the computer, the phone, or the cup of coffee to go to a new page and read more about the topic:</p>
@@ -85,7 +247,7 @@
 
 		<!-- This is a comment -->
 
-		<bdo dir="rtl">This text will be written from right to left</bdo>
+		<bdo dir="rtl"style="color:white;">This text will be written from right to left</bdo>
 
 		<!-- Do not display this image at the moment
 		<img src="bird_meme.jpeg" alt="bird meme">
@@ -93,7 +255,7 @@
 
 		<p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
 
-		<address>
+		<address style="color:white;">
 			Written by Xexéu Dias.<br>
 			Visit us at:<br>
 			Example.com<br>
@@ -106,7 +268,7 @@
 		<p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p>
 
 		<p>Here is a quote from WWF's website:</p>
-		<blockquote cite="http://www.worldwildlife.org/who/index.html">
+		<blockquote cite="http://www.worldwildlife.org/who/index.html" style="color:white;">
 			For 50 years, WWF has been protecting the future of nature.
 			The world's leading conservation organization,
 			WWF works in 100 countries and is supported by
@@ -137,14 +299,14 @@
 		<p style="color:blue;">I am blue.</p>
 		<p style="font-size:50px;">I am big.</p>
 
-		<pre>
-			My Bonnie lies over the ocean.
+		<pre style="color: #09ECDC">
+My Bonnie lies over the ocean.
 
-		My Bonnie lies over the sea.
+	My Bonnie lies over the sea.
 
-	My Bonnie lies over the ocean.
+		My Bonnie lies over the ocean.
 
-Oh, bring back my Bonnie to me.
+			Oh, bring back my Bonnie to me.
 		</pre>
 
 		<hr>
