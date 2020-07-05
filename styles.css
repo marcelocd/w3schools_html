@@ -1,3 +1,7 @@
+div {
+	background-image: url('neguinha.jpeg')
+}
+
 a:link, a:visited {
 	color: white;
 	background-color: #f44336;
